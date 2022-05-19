@@ -1,0 +1,316 @@
+/* Start Variables */
+
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --blue-color: #eff7fa;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+  color: var(--dark-color);
+}
+
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+} 
+
+/* End Components */
+
+/* Start Preloader */
+
+.preloader {
+  display: flex;
+  height: 100%;
+  z-index: 9999;
+}
+
+.preloader span {
+  transform: translate(50px, -50px);
+}
+
+/* End Preloader */
+
+/* Start Nav */
+
+.navbar {
+  background-color: var(--dark-color);
+} 
+
+.navbar .navbar-toggler {
+  color: white;
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+  cursor: pointer;
+}
+
+.navbar .search svg {
+  color: white;
+}
+
+.navbar .search.active svg {
+  color: var(--green-color);
+}
+
+.navbar .search-box {
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.navbar .search-box.active {
+  width: 200px;
+}
+
+.navbar .search-box input {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.navbar .search-box input:focus {
+  outline: none;
+}
+
+.navbar .search-box input::placeholder {
+  color: white;
+}
+
+
+/* End Nav */
+
+/* Start Landing */
+
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 84px);
+}
+
+.landing h1 {
+  letter-spacing: 0.25rem;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+/* End Landing */
+
+/* Start Features */
+
+.features .feat .icon-holder {
+  height: 200px;
+}
+
+.features .feat .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .feat .icon-holder .number {
+  font-size: 12rem;
+  color: var(--blue-color);
+}
+
+.features .feat .icon-holder .icon {
+  color: var(--green-color);
+
+}
+
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+
+/* End Features */
+
+/* Start Our Work */
+
+.our-work {
+  background-color: var(--blue-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work ul li.active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #33d1cc79;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(calc(-100% + -5px));
+  transition: 0.3s;
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/* End Our Work */
+
+/* Start Stuff */
+
+.stuff p.description{
+  max-width: 500px;
+}
+
+.stuff .text {
+  max-width: 500px;
+}
+
+/* End Stuff */
+
+/* Start Our Team */
+
+.our-team {
+  background-color: var(--blue-color);
+}
+
+.our-team h2 {
+  color: var(--yellow-color);
+}
+
+.our-team .box h4 {
+  background-color: var(--green-color);
+  color: white;
+}
+
+/* End Our Team */
+
+/* Start Project */
+
+.project {
+  background-color: var(--dark-color);
+}
+
+/* End Project */
+
+/* Start Subscribe */
+
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe input[type="text"]::placeholder {
+  color: white;
+}
+
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+/* End Subscribe */
+
+/* Strat Footer */
+
+footer {
+  background-color: var(--dark-color);
+}
+
+footer span {
+  cursor: pointer;
+}
+
+footer .copyright > span {
+  color: var(--green-color);
+}
+
+footer ul li a svg {
+  width: 20px;
+  height: 20px;
+}
+
+footer .copyright div span {
+  color: var(--yellow-color);
+}
+
+footer .facebook {
+  background-color: #1877f2;
+}
+
+footer .twitter {
+  background-color: #1da1f2;
+}
+
+footer .linkedin {
+  background-color: #0077b5;
+}
+
+footer .youtube {
+  background-color: #ff0000;
+}
+
+/* End Footer */
