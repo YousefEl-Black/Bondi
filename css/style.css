@@ -172,7 +172,7 @@ body {
 .our-work ul li {
   padding: 0.5rem 1rem;
   cursor: pointer;
-
+  transition: 0.3s;
 }
 
 .our-work ul li:not(.active):hover {
@@ -182,6 +182,14 @@ body {
 .our-work ul li.active {
   background-color: var(--red-color);
   color: var(--yellow-color);
+}
+
+.our-work .work {
+  display: none;
+}
+
+.our-work .work.active {
+  display: block;
 }
 
 .our-work .box {

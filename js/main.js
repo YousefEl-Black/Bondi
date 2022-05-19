@@ -68,11 +68,43 @@ $(document).ready( () => {
 // Search Adjustment
 
 let searchIcon = document.querySelector(".navbar .search");
-console.log(searchIcon)
 let searchBox = document.querySelector(".navbar .search-box");
-console.log(searchBox)
 
 searchIcon.onclick = () => {
   searchBox.classList.toggle("active");
   searchIcon.classList.toggle("active");
+}
+
+// Work Filter 
+
+let allWorks = document.querySelectorAll(".our-work .row .work");
+let photoWorks = document.querySelectorAll(".our-work .row .photo");
+let codeWorks = document.querySelectorAll(".our-work .row .code");
+let appWorks = document.querySelectorAll(".our-work .row .app");
+let designWorks = document.querySelectorAll(".our-work .row .design");
+
+let workIcons = document.querySelectorAll(".our-work ul .icon");
+
+let allIcon = document.querySelector(".our-work ul .all-icon");
+let designIcon = document.querySelector(".our-work ul .design-icon");
+let codeIcon = document.querySelector(".our-work ul .code-icon");
+let photoIcon = document.querySelector(".our-work ul .photo-icon");
+let appIcon = document.querySelector(".our-work ul .app-icon");
+
+workIcons.forEach((ele) => {
+  ele.addEventListener("click", (e) => {
+    for (i = 0; i < workIcons.length; i++) {
+      workIcons[i].classList.remove("active");
+    }
+    e.target.classList.add("active");
+  })
+})
+
+let filterWorks = function (name) {
+  allWorks.forEach(ele => {
+    ele.classList.remove("active")
+  });
+  document.querySelectorAll(`.our-work .row .${name}`).forEach( ele => {
+    ele.classList.add("active")
+  })
 }
